@@ -1,8 +1,9 @@
 n = int(input())
-lst = []
-i = 0
-while len(lst) != n:
-    if i % 2 != 0 and i % 3 != 0 and i % 5 !=0:
-        lst.append(i)
-    i += 1
-print(*lst)
+count = 0
+num = 1
+
+while count < n:
+    if num % 2 != 0 and num % 3 != 0 and num % 5 != 0:
+        print(num, end=" ")
+        count += 1
+    num += 1
