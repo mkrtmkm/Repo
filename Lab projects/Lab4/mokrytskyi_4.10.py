@@ -1,9 +1,9 @@
 n = int(input())
 suma = 0
 for i in range(100, 1000):
-    c = i % 10
-    b = i // 10 % 10
     a = i // 100
+    b = i // 10 % 10
+    c = i % 10
     if n == 1:
         if a % 2 == 0 and b % 2 == 0 and c % 2 == 0:
             suma += i
@@ -20,6 +20,6 @@ for i in range(100, 1000):
         if i == a ** 3 + b ** 3 + c ** 3:
             suma += i
     else:
-        if a != b or a != c or b != c:
+        if a != b and a != c and b != c:
             suma += 1
 print(suma)
