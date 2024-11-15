@@ -1,18 +1,23 @@
-t = int(input())
+def find_most_popular(votes):
+    count = {}
+    for num in votes:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
 
-for _ in range(t):
+    max_frequency = max(count.values())
+    candidates = {num for num, freq in count.items() if freq == max_frequency}
+    return min(candidates)
+
+n = int(input())
+results = []
+
+for _ in range(n):
     v = int(input())
-    votes = [0] * 1001 
-
+    votes = []
     for _ in range(v):
-        num = int(input())
-        votes[num] += 1  # Збільшуємо кількість голосів для цього числа
+        votes.append(int(input()))
+    results.append(find_most_popular(votes))
 
-    # Знаходимо максимальну кількість голосів
-    max_votes = max(votes)
-
-    # Шукаємо найменше число, яке отримало максимальну кількість голосів
-    for num in range(1, 1001):
-        if votes[num] == max_votes:
-            print(num)
-            break
+print("\n".join(map(str, results)))
