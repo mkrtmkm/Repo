@@ -36,8 +36,8 @@ def multiply_matrices(matrix1, matrix2):
         result.append(row)
     return result
 
-matrix1 = input_matrix('matrix1.txt')
-matrix2 = input_matrix('matrix2.txt')
+matrix1 = input_matrix('input13.4.1.txt')
+matrix2 = input_matrix('input13.4.2.txt')
 
 sum_matrix = add_matrices(matrix1, matrix2)
 product_matrix = multiply_matrices(matrix1, matrix2)
