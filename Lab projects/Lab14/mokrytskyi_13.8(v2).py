@@ -72,6 +72,11 @@ def write_polynom(filename, content):
                 file.write(content)
             print(f"Результат успішно записано у файл '{filename2}'.")
 
+    else:
+        with open(filename, "w", encoding='utf-8') as file:
+            file.write(content)
+        print(f"Результат успішно записано у файл '{filename}'.")
+
 P = read_polinom("poly1.13.8.txt")
 R = read_polinom("poly2.13.8.txt")
 
